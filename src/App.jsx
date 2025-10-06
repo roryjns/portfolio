@@ -1,6 +1,6 @@
 import './App.css'
-import ReactCardCarousel from 'react-card-carousel';
-import { useEffect, useState } from 'react';
+import { Carousel } from "react-responsive-carousel";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function SectionTitle({ children }) {
   return (
@@ -17,28 +17,12 @@ function SectionTitle({ children }) {
 
 function App() {
   const skills = ['Unity', 'C#', 'Git', 'React', 'Python', 'Java'];
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const cards = [
     { src: '/Platforming roguelite.gif', alt: 'Mutagenesis' },
     { src: '/Platforming roguelite.gif', alt: 'A Blank Planet' },
     { src: '/Platforming roguelite.gif', alt: 'PickMyNextGame' }
   ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => {
-        const nextIndex = (prev + 1) % cards.length;
-        return nextIndex;
-      });
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [cards.length]);
-
-  const handleCardClick = (index) => {
-    setActiveIndex(index);
-  };
 
   const projects = [
     {
@@ -99,12 +83,19 @@ function App() {
             <a className="link" href="https://github.com/RoryJNS?tab=repositories">GitHub</a>{' '}page.
           </p>  
           <div className="carousel-container">
-            <ReactCardCarousel autoplay={true} autoplay_speed={3000}>
+            <Carousel
+              autoPlay
+              infiniteLoop
+              interval={2000}
+              showArrows={true}
+              showStatus={false}
+              showThumbs={false}
+              emulateTouch
+              stopOnHover
+            >
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className={`card ${activeIndex === index ? 'active-card' : ''}`}
-                  onClick={() => handleCardClick(index)}
                 >
                   <img className="card-img" src={card.src} alt={card.alt} />
                   <div className="card-text">{card.alt}</div>
@@ -113,7 +104,7 @@ function App() {
                   </div>
                 </div>
               ))}
-            </ReactCardCarousel>
+            </Carousel>
           </div>
         </section>
 
