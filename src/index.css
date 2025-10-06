@@ -1,0 +1,103 @@
+:root {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 350;
+  font-size: 1.2rem;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 320px;
+  min-height: 80vh;
+  margin: 0;
+}
+
+.main-content {
+  padding: 6rem 6rem 8rem;
+  margin: 0 auto;
+  max-width: 70rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+}
+
+.header, .footer {
+  width: 100%;
+  left: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0rem 17.5rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: #1db954;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.resumeButton {
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  border: 0.1rem solid white;
+}
+
+.resumeButton:hover{
+  color: #323232;
+  border: 0.1rem solid #323232;
+}
+
+.footer {
+  background-color: #323232;
+  display: flex;
+}
+
+a {
+  color: white;
+  text-decoration: inherit;
+}
+
+.link {
+  color: #1db954;
+}
+
+.button, a.button {    
+  padding-left: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+button:hover, a.button:hover {
+  color: #1db954;
+}
+
+::selection {
+  background-color: #1db9549a;
+}
+
+@media (max-width: 768px) {
+  .header, .footer{
+    padding: 0rem 2.5rem;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 6.5rem 2.5rem 1.5rem;
+  }
+}
