@@ -4,87 +4,106 @@
   font-weight: 350;
   font-size: 1.2rem;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.95);
   background-color: #242424;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  min-width: 320px;
-  min-height: 80vh;
   margin: 0;
 }
 
 .main-content {
-  padding: 6rem 6rem 8rem;
+  padding: 5rem 6vw 4rem;
   margin: 0 auto;
-  max-width: 70rem;
-  text-align: center;
+  max-width: 60rem;
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
-.header, .footer {
+h2 {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.header,
+.footer {
   width: 100%;
-  left: 0;
-  align-items: center;
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 0rem 17.5rem;
+  justify-content: center;
 }
 
 .header {
   position: fixed;
-  top: 0;
   background-color: #1db954;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 100;
 }
 
-.resumeButton {
-  padding: 0.3rem 0.8rem;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60rem;
+}
+
+.cvButton {
+  padding: 0.3rem 0.4rem;
   border-radius: 0.3rem;
   border: 0.1rem solid white;
 }
 
-.resumeButton:hover{
+.cvButton:hover {
   color: #323232;
   border: 0.1rem solid #323232;
 }
 
+.carousel-container {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.carousel img {
+  height: 100%;
+}
+
 .footer {
   background-color: #323232;
-  display: flex;
 }
 
 a {
   color: white;
-  text-decoration: inherit;
+  text-decoration: none;
+  padding: 1rem 0rem;
 }
 
 .link {
   color: #1db954;
 }
 
-.button, a.button {    
-  padding-left: 1.5rem;
+.button,
+a.button {
+  padding-right: 1rem;
   transition: all 0.2s ease;
 }
 
-button:hover, a.button:hover {
-  color: #1db954;
+button:hover,
+a.button:hover {
+  color: #323232;
 }
 
 ::selection {
@@ -92,12 +111,14 @@ button:hover, a.button:hover {
 }
 
 @media (max-width: 768px) {
-  .header, .footer{
-    padding: 0rem 2.5rem;
+  .header-content {
+    flex-direction: column;
+    padding: 0 0rem;
+    padding-bottom: 0.7rem;
   }
 
   .main-content {
-    width: 100%;
-    padding: 6.5rem 2.5rem 1.5rem;
+    padding: 7rem 6vw 4rem;
+    font-size: 110%;
   }
 }

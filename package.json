@@ -12,9 +12,13 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "framer-motion": "^12.23.24",
+    "katex": "^0.16.25",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-responsive-carousel": "^3.2.23"
+    "react-katex": "^3.1.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
