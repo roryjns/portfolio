@@ -17,7 +17,7 @@ export default function App() {
             <a className="button" href="https://www.linkedin.com/in/rory-simpson">LinkedIn</a>
             <a className="button" href="https://github.com/roryjns">GitHub</a>
             <a className="button" href="https://rory-simpson.itch.io">itch.io</a>
-            <a className="cvButton" href="/portfolio/Rory Simpson CV.pdf">CV ↓</a>
+            <a className="cvButton" href="/portfolio/RorySimpsonCV.pdf">CV ↓</a>
           </div>
         </div>
       </header>

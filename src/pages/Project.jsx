@@ -341,7 +341,7 @@ export default function Project() {
 
   return (
     <div className="project-page">
-      <a className="link" href="/">&lt; Back</a>
+      <a className="link" href="/portfolio/">&lt; Back</a>
       <div className='project-title'>{project.title}</div>
       <div className="carousel-container">
         <Carousel showIndicators={true} showArrows={true} showStatus={false} showThumbs={false}>
