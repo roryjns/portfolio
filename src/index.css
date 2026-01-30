@@ -40,6 +40,10 @@ h2 {
   text-align: left;
 }
 
+h3 {
+  color: #1db954;
+}
+
 .header,
 .footer {
   width: 100%;
@@ -49,7 +53,7 @@ h2 {
 
 .header {
   position: fixed;
-  background-color: #1db954;
+  background-color: #157b39;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
@@ -93,12 +97,14 @@ a {
 
 .link {
   color: #1db954;
+  text-decoration: underline;
 }
 
 .button,
 a.button {
   padding-right: 1rem;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
+  will-change: color;
 }
 
 button:hover,

@@ -1,8 +1,10 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import Home from './pages/Home'
-import Project from './pages/Project'
 import ScrollToTop from './ScrollToTop'
+import { lazy, Suspense } from "react";
+
+const Home = lazy(() => import("./pages/Home"));
+const Project = lazy(() => import("./pages/Project"));
 
 export default function App() {
   const location = useLocation();
@@ -15,7 +17,7 @@ export default function App() {
           <div>
             <a className="button" href="mailto:roryjns123@gmail.com">Email</a>
             <a className="button" href="https://www.linkedin.com/in/rory-simpson">LinkedIn</a>
-            <a className="button" href="https://github.com/roryjns">GitHub</a>
+            <a className="button" href="https://github.com/roryjns?tab=repositories">GitHub</a>
             <a className="button" href="https://rory-simpson.itch.io">itch.io</a>
             <a className="cvButton" href="/portfolio/RorySimpsonCV.pdf">CV ↓</a>
           </div>
